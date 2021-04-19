@@ -48,7 +48,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_one:
+                soundPool.play(sound1, 1, 1, 0, 0, 1);
                 break;
+            case R.id.button_two:
+                soundPool.play(sound2, 1, 1, 0, 0, 1);
+                break;
+            case R.id.button_three:
+                soundPool.play(sound3, 1, 1, 0, 0, 1);
+                break;
+            case R.id.button_four:
+                soundPool.play(sound4, 1, 1, 0, 0, 1);
+                break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(soundPool != null) {
+            soundPool.release();
+            soundPool = null;
         }
     }
 }
