@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setAudioAttributes(audioAttributes)
                 .build();
 
+        sound1 = soundPool.load(this, R.raw.complete, 1);
+        sound2 = soundPool.load(this, R.raw.correct, 1);
+        sound3 = soundPool.load(this, R.raw.defeat_one, 1);
+        sound4 = soundPool.load(this, R.raw.defeat_two, 3);
+
         buttonOne = findViewById(R.id.button_one);
         buttonTwo = findViewById(R.id.button_two);
         buttonThree = findViewById(R.id.button_three);
